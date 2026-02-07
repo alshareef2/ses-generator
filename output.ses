@@ -1,0 +1,12 @@
+From the ROOTSys perspective, ROOT is made of AA!
+
+
+From the AASys perspective, AA is made of BEHAVIOR1, BEHAVIOR2, BEHAVIOR3, BEHAVIOR4, b, and c!
+
+From the AASys perspective, BEHAVIOR1 sends outFLOW1 to BEHAVIOR3 as inFLOW1!
+From the AASys perspective, BEHAVIOR2 sends outFLOW2 to c as inFLOW2!
+From the AASys perspective, BEHAVIOR3 sends outFLOW3 to BEHAVIOR2 as inFLOW3!
+From the AASys perspective, BEHAVIOR3 sends outFLOW4 to b as inFLOW4!
+From the AASys perspective, BEHAVIOR4 sends outFLOW5 to BEHAVIOR2 as inFLOW5!
+From the AASys perspective, b sends outFLOW6 to BEHAVIOR4 as inFLOW6!
+

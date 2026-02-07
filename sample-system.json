@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "AA",
+      "name": "AA",
+      "type": "activity"
+    },
+
+    {
+      "id": "B1",
+      "name": "BEHAVIOR1",
+      "parentId": "AA"
+    },
+    {
+      "id": "B2",
+      "name": "BEHAVIOR2",
+      "parentId": "AA"
+    },
+    {
+      "id": "B3",
+      "name": "BEHAVIOR3",
+      "parentId": "AA"
+    },
+    {
+      "id": "B4",
+      "name": "BEHAVIOR4",
+      "parentId": "AA"
+    },
+    {
+      "id": "b",
+      "name": "b",
+      "parentId": "AA"
+    },
+    {
+      "id": "c",
+      "name": "c",
+      "parentId": "AA"
+    }
+  ],
+
+  "connections": [
+    { "from": "AA", "to": "B1" },
+    { "from": "c",   "to": "AA" },
+
+    { "from": "AA", "to": "B2" },
+    { "from": "B2",  "to": "c" },
+
+    { "from": "B1",  "to": "B3" },
+    { "from": "B3",  "to": "b" },
+    { "from": "B3",  "to": "B2" },
+    { "from": "b",   "to": "B4" },
+
+    { "from": "B4",  "to": "AA" },
+    { "from": "B4",  "to": "B2" }
+  ]
+}
