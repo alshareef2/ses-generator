@@ -254,9 +254,9 @@ public class SESEmitter {
                 int k = flowCounter.merge(scopeKey(parentId), 1, Integer::sum);
 
                 sb.append("From the ").append(perspective).append(" perspective, ")
-                  .append(src.name).append(" sends outFLOW").append(k)
+                  .append(src.name).append(" sends outPort").append(k)
                   .append(" to ").append(dst.name)
-                  .append(" as inFLOW").append(k).append("!\n");
+                  .append(" as inPort").append(k).append("!\n");
             }
 
             sb.append("\n");

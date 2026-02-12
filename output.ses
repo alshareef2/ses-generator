@@ -1,12 +1,14 @@
-From the ROOTSys perspective, ROOT is made of AA!
+From the ROOTSys perspective, ROOT is made of MotorSystem!
 
 
-From the AASys perspective, AA is made of BEHAVIOR1, BEHAVIOR2, BEHAVIOR3, BEHAVIOR4, b, and c!
+From the MotorSystemSys perspective, MotorSystem is made of DCMotor, Ground, Monitor, PIController, SignalVoltage, Step, and Subtract!
 
-From the AASys perspective, BEHAVIOR1 sends outFLOW1 to BEHAVIOR3 as inFLOW1!
-From the AASys perspective, BEHAVIOR2 sends outFLOW2 to c as inFLOW2!
-From the AASys perspective, BEHAVIOR3 sends outFLOW3 to BEHAVIOR2 as inFLOW3!
-From the AASys perspective, BEHAVIOR3 sends outFLOW4 to b as inFLOW4!
-From the AASys perspective, BEHAVIOR4 sends outFLOW5 to BEHAVIOR2 as inFLOW5!
-From the AASys perspective, b sends outFLOW6 to BEHAVIOR4 as inFLOW6!
+From the MotorSystemSys perspective, DCMotor sends outPort1 to Ground as inPort1!
+From the MotorSystemSys perspective, DCMotor sends outPort2 to Monitor as inPort2!
+From the MotorSystemSys perspective, DCMotor sends outPort3 to Subtract as inPort3!
+From the MotorSystemSys perspective, PIController sends outPort4 to SignalVoltage as inPort4!
+From the MotorSystemSys perspective, SignalVoltage sends outPort5 to DCMotor as inPort5!
+From the MotorSystemSys perspective, SignalVoltage sends outPort6 to Ground as inPort6!
+From the MotorSystemSys perspective, Step sends outPort7 to Subtract as inPort7!
+From the MotorSystemSys perspective, Subtract sends outPort8 to PIController as inPort8!
 

@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "MotorSystem",
+      "name": "MotorSystem"
+    },
+
+    {
+      "id": "Ground",
+      "name": "Ground",
+      "parentId": "MotorSystem"
+    },
+    {
+      "id": "VoltageSource",
+      "name": "SignalVoltage",
+      "parentId": "MotorSystem"
+    },
+    {
+      "id": "DCMotor",
+      "name": "DCMotor",
+      "parentId": "MotorSystem"
+    },
+
+    {
+      "id": "StepRef",
+      "name": "Step",
+      "parentId": "MotorSystem"
+    },
+    {
+      "id": "ErrorCalc",
+      "name": "Subtract",
+      "parentId": "MotorSystem"
+    },
+    {
+      "id": "PI",
+      "name": "PIController",
+      "parentId": "MotorSystem"
+    },
+
+    {
+      "id": "Monitor",
+      "name": "Monitor",
+      "parentId": "MotorSystem"
+    }
+  ],
+
+  "connections": [
+    { "from": "VoltageSource", "to": "DCMotor", "type": "electrical" },
+    { "from": "DCMotor", "to": "Ground", "type": "electrical" },
+    { "from": "VoltageSource", "to": "Ground", "type": "electrical" },
+    { "from": "StepRef", "to": "ErrorCalc", "type": "reference" },
+    { "from": "DCMotor", "to": "ErrorCalc", "type": "feedback" },
+    { "from": "ErrorCalc", "to": "PI", "type": "error" },
+    { "from": "PI", "to": "VoltageSource", "type": "control" },
+    { "from": "DCMotor", "to": "Monitor", "type": "alarm" }
+  ]
+}
